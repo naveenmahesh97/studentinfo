@@ -1,100 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zonal Education Office - Thanamalwila</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Thanamalwila Zonal Education Office</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      /* Body Styles */
-      body {
-        font-family: 'Helvetica Neue', sans-serif;
-        background-color: rgba(255, 251, 5, 0.5);
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Header Styles */
-      .header {
-        background-color: #1c1c1e;
-        padding: 20px;
-        text-align: center;
-        color: #fff;
-        font-weight: bold;
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-
-      /* Tile Styles */
-      .tile-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      
-      .tile {
-        width: 200px;
-        height: 200px;
-        margin: 20px;
-        background-color: rgba(0, 255, 115, 0.5);
-        backdrop-filter: blur(5px);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        line-height: 200px;
-        font-size: 24px;
-        font-weight: bold;
-        color: #1c1c1e;
-        text-decoration: none;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .tile:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Tile Color Styles */
-      .tile:nth-child(1) {
-        background-color: rgba(0, 247, 255, 0.5);
-        backdrop-filter: blur(10px);
-      }
-      
-      .tile:nth-child(2) {
-        background-color: #ffce54;
-      }
-      
-      .tile:nth-child(3) {
-        background-color: #e7505a;
-      }
-      
-      .tile:nth-child(4) {
-        background-color: #51cf66;
-      }
-      
-      .tile:nth-child(5) {
-        background-color: #6bfff3;
-      }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(to bottom, #f0f4f8 0%, #e5eaf3 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .macos-window {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 10px 20px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .macos-dock {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(30px);
+            border-radius: 12px;
+        }
+        .app-icon {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .app-icon:hover {
+            transform: scale(1.1) translateY(-10px);
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
+        }
+        .header-gradient {
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        }
     </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="header">
-     <h3> Student Information System ( Exam) 2023 <br> Zonal Education Office - Thanamalwila</h3>
-    </div>
-    
-    <!-- Tile Container -->
-    <div class="tile-container">
-      <a href="2-4 sadana.html" class="tile">Grade 2 & 4</a>
-      <a href="sadana 9.html" class="tile">Grade 9</a>
-      <a href="11 sadana.html" class="tile">Grade 11 </a>
-      <a href="sadana english.html" class="tile">English Medium</a>
-      
-    </div>
-    
-    <!-- Bootstrap Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- macOS-style Header -->
+    <header class="header-gradient text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-semibold">Zonal Education Office - Thanamalwila</h1>
+                <p class="text-sm opacity-80">Student Information System (Exam) 2024</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="macos-window p-6 rounded-xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- App Icons -->
+                <a href="2-4 sadana.html" class="app-icon text-center">
+                    <div class="bg-blue-500 rounded-2xl p-6 flex flex-col items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <p class="mt-2 text-white font-semibold">Grade 2 & 4</p>
+                    </div>
+                </a>
+
+                <a href="sadana 9.html" class="app-icon text-center">
+                    <div class="bg-green-500 rounded-2xl p-6 flex flex-col items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                        <p class="mt-2 text-white font-semibold">Grade 9</p>
+                    </div>
+                </a>
+
+                <a href="11 sadana.html" class="app-icon text-center">
+                    <div class="bg-red-500 rounded-2xl p-6 flex flex-col items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <p class="mt-2 text-white font-semibold">Grade 11</p>
+                    </div>
+                </a>
+
+                <a href="sadana english.html" class="app-icon text-center">
+                    <div class="bg-purple-500 rounded-2xl p-6 flex flex-col items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7V8.5a3.5 3.5 0 00-7 0v1m7 7h-7V8.5a3.5 3.5 0 017 0v1m-7-7a3.5 3.5 0 007 0v-1m-7 7a3.5 3.5 0 007 0v-1" />
+                        </svg>
+                        <p class="mt-2 text-white font-semibold">English Medium</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- macOS-style Dock -->
+    <footer class="fixed bottom-4 left-0 right-0 flex justify-center z-50">
+        <div class="macos-dock px-4 py-2 flex space-x-4 items-center">
+            <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+            </div>
+            <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
